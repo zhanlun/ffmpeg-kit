@@ -12,17 +12,7 @@ Pod::Spec.new do |s|
   }
 
   s.platform     = :ios, '12.0'
-  s.vendored_frameworks = [
-    'ffmpegkit.xcframework',
-    'libavcodec.xcframework',
-    'libavutil.xcframework',
-    'libavdevice.xcframework',
-    'libavfilter.xcframework',
-    'libavformat.xcframework',
-    'libswresample.xcframework',
-    'libswscale.xcframework'
-  ]
-
-  s.preserve_paths = '*.xcframework'
+  s.vendored_frameworks = 'FFmpegDeps/*.xcframework'
+  s.preserve_paths = 'FFmpegDeps/*.xcframework'
   s.module_name = 'FFmpegKitStatic'
 end
